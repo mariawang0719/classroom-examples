@@ -1,0 +1,22 @@
+x = 0
+
+def setup():
+    size(640, 480)
+
+
+def draw():
+    global x
+    
+    if x >= 640:
+        x = 0
+    x += 3
+    
+    background("#6B238E")
+    
+    noStroke()
+    ellipse(x, height/6, 150, 150)
+    fill(255)
+    ellipse(x, height/3, 50, 50)
+    ellipse(x+30, height/3, 50, 50)
+    ellipse(x+10, height/3-20, 50, 50)
+    fill("#FFFF00")
